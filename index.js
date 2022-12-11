@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 
 app.get("/nearly-place", async (req, res)=> {
     const ress= await axios({
-        url: `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${req.query.latitude}%2C${req.query.longtitude}&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyCKbIS2qC0sJJuol4rcPZFnNiJsRfzK7j0`,
+        url: `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${req.query.latitude}%2C${req.query.longtitude}&radius=1500&type=restaurant&key=AIzaSyCKbIS2qC0sJJuol4rcPZFnNiJsRfzK7j0`,
         method: "get"
     })  
     const result= await ress.data
